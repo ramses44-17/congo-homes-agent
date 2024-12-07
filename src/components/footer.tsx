@@ -5,7 +5,7 @@ export function Footer() {
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <div className="text-center">
         <Image
-          src="/WhatsApp Image 2024-12-05 à 18.21.38_d119578c.jpg"
+          src="/logo.jpg"
           alt="Congo Homes Logo"
           width={150}
           height={75}
