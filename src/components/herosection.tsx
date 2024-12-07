@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import { Building2, Users, BarChart2 } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image"
+import Image from "next/image";
 import WaitlistForm from "./input-with-button";
 
 const containerVariants = {
@@ -9,9 +9,9 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
-    }
-  }
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 const itemVariants = {
@@ -20,16 +20,17 @@ const itemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
 export function HeroSection() {
-
-
   return (
-    <div className="relative h-screen overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background" id="cta">
+    <div
+      className="relative min-h-screen overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background"
+      id="cta"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/2 -right-1/2 w-full h-full">
@@ -59,48 +60,46 @@ export function HeroSection() {
             animate="visible"
             className="mx-auto max-w-2xl text-center"
           >
-            <motion.div variants={itemVariants}
-            className="flex justify-center"
-            >
-              <Image 
-                src="/logo.jpg" 
-                alt="Congo Homes Logo" 
-                width={64}
-                height={64}
-                className="border-none rounded-full"
+            <motion.div variants={itemVariants} className="flex justify-center">
+              <Image
+                src="/logo.jpg"
+                alt="Congo Homes Logo"
+                width={150}
+                height={75}
               />
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               variants={itemVariants}
               className="text-3xl font-bold tracking-tight text-primary sm:text-5xl"
             >
-             Gérez, connectez, et maximisez vos opportunités immobilières.
+              Gérez, connectez, et maximisez vos opportunités immobilières.
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               variants={itemVariants}
               className="mt-6 text-lg leading-8 text-muted-foreground"
             >
-              Soyez parmi les premiers agents immobiliers à rejoindre notre plateforme innovante. 
-              Inscrivez-vous à la liste d'attente pour un accès prioritaire dès le lancement.
+              Soyez parmi les premiers agents immobiliers à rejoindre notre
+              plateforme innovante. Inscrivez-vous à la liste d'attente pour un
+              accès prioritaire dès le lancement.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               variants={itemVariants}
               className="mt-10 flex justify-center"
             >
-               <WaitlistForm/>
+              <WaitlistForm />
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               variants={containerVariants}
-              className="mt-10 flex justify-center gap-8"
+              className="mt-10 flex justify-center gap-8 flex-wrap"
             >
               {[
                 { icon: Building2, text: "Lancement Imminent" },
                 { icon: Users, text: "Accès Prioritaire" },
-                { icon: BarChart2, text: "Phase Beta" }
+                { icon: BarChart2, text: "Phase Beta" },
               ].map((item, index) => (
                 <motion.div
                   key={index}
